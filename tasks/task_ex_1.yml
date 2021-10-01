@@ -1,0 +1,11 @@
+---
+
+- name: import/include tasks example 1 task 1
+  debug:
+    msg: "{{ inventory_hostname }} ex1 task 1"
+    verbosity: "{{ pv | default(1) }}"
+
+- name: import/include tasks example 1 task 2
+  debug:
+    msg: "{{ inventory_hostname }} ex1 task 2"
+    verbosity: "{{ pv | default(1) }}"

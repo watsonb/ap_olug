@@ -1,0 +1,24 @@
+---
+
+exclude_paths:
+  - roles
+  - plays/roles
+  - utils/roles
+  - collections
+
+parseable: true
+
+quiet: true
+
+# rulesdir:
+#  - ./rule/directory/
+
+skip_list:
+  - skip_ansible_lint
+
+# tags:
+#  - run_this_tag
+
+use_default_rules: true
+
+verbosity: 0

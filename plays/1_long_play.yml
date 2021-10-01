@@ -1,0 +1,51 @@
+---
+
+- name: A "long" playbook example
+  hosts: "{{ hg | default('all') }}"
+  gather_facts: false
+  tasks:
+
+    - name: Task 1
+      debug:
+        msg: "{{ inventory_hostname }} 1"
+        verbosity: "{{ pv | default(1) }}"
+
+    - name: Task 2
+      debug:
+        msg: "{{ inventory_hostname }} 2"
+        verbosity: "{{ pv | default(1) }}"
+
+    - name: Task 3
+      debug:
+        msg: "{{ inventory_hostname }} 3"
+        verbosity: "{{ pv | default(1) }}"
+
+    - name: Task 4
+      debug:
+        msg: "{{ inventory_hostname }} 4"
+        verbosity: "{{ pv | default(1) }}"
+
+    - name: Task 5
+      debug:
+        msg: "{{ inventory_hostname }} 5"
+        verbosity: "{{ pv | default(1) }}"
+
+    - name: Task 6
+      debug:
+        msg: "{{ inventory_hostname }} 6"
+        verbosity: "{{ pv | default(1) }}"
+
+    - name: Task 7
+      debug:
+        msg: "{{ inventory_hostname }} 7"
+        verbosity: "{{ pv | default(1) }}"
+
+    - name: Task 8
+      debug:
+        msg: "{{ inventory_hostname }} 8"
+        verbosity: "{{ pv | default(1) }}"
+
+    - name: Task 9
+      debug:
+        msg: "{{ inventory_hostname }} 9"
+        verbosity: "{{ pv | default(1) }}"

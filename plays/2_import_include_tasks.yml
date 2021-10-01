@@ -1,0 +1,22 @@
+---
+
+- name: A task refactoring example
+  hosts: "{{ hg | default('all') }}"
+  gather_facts: false
+  tasks:
+
+    - name: Task 1
+      debug:
+        msg: "{{ inventory_hostname }} 1"
+        verbosity: "{{ pv | default(1) }}"
+
+    - name: Import Example 1 tasks
+      import_tasks: ../tasks/task_ex_1.yml
+
+    - name: Task 2
+      debug:
+        msg: "{{ inventory_hostname }} 2"
+        verbosity: "{{ pv | default(1) }}"
+
+    - name: Import Example 2 tasks
+      import_tasks: ../tasks/task_ex_2.yml

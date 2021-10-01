@@ -1,0 +1,44 @@
+---
+
+- name: Simple plays (faux Database)
+  hosts: "{{ hg | default('db_servers') }}"
+  gather_facts: true
+  tasks:
+
+    - name: Setup Database
+      import_role:
+        name: ar_olug_hello_world
+
+
+- name: Simple plays (faux Middleware)
+  hosts: "{{ hg | default('app_servers') }}"
+  gather_facts: true
+  tasks:
+
+    - name: Deploy JBoss
+      import_role:
+        name: ar_olug_hello_world
+
+
+- name: Simple plays (faux Web)
+  hosts: "{{ hg | default('web_servers') }}"
+  gather_facts: true
+  tasks:
+
+    - name: Deploy Apache
+      import_role:
+        name: ar_olug_hello_world
+
+    - name: Deploy Nginx
+      import_role:
+        name: ar_olug_hello_world
+
+
+- name: Simple plays (faux Load Balancer)
+  hosts: "{{ hg | default('lb_servers') }}"
+  gather_facts: true
+  tasks:
+
+    - name: Deploy HA Proxy
+      import_role:
+        name: ar_olug_hello_world
