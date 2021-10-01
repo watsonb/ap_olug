@@ -1,0 +1,5 @@
+---
+
+- src: git@github.com:watsonb/ar_olug_hello_world.git
+  scm: git
+  version: master
