@@ -1,3 +1,4 @@
 ---
 
-collections: []
+collections:
+  - sindhuparvathi_gopi.ansible_collection_template
